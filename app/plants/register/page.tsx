@@ -1,8 +1,8 @@
 'use client'
 
 import Form from 'next/form'
-import { createPlant } from './../../plants/actions/actions.ts'
-import { Input } from '@/components/common/input/page.tsx'
+import { createPlant } from './../../plants/actions/actions'
+import { Input } from '@/components/common/input/page'
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
