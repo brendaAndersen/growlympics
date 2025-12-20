@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link"
+import { ActiveLink } from "../active-link/active-link"
 
 export const Footer = () => {
     return (
@@ -19,12 +22,12 @@ export const Footer = () => {
       </p>
 
         <nav className="flex items-center gap-6 text-sm text-muted-foreground">
-            <Link href="/terms" className="transition-colors hover:text-green-400">
-            Terms and Conditions
-            </Link>
-            <Link href="/feedback" className="transition-colors hover:text-green-400">
-            Feedback
-            </Link>
+            <ActiveLink href="/terms">
+              Terms & Conditions
+            </ActiveLink>
+            <ActiveLink href="/feedback">
+              Feedback
+            </ActiveLink>
         </nav>
 
         </div>

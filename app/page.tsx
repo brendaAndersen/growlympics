@@ -1,4 +1,6 @@
+import { ActiveLink } from "@/components/common/active-link/active-link";
 import { Header } from "@/components/common/header";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,7 +39,7 @@ export default function Home() {
               opacity-0 animate-slide-up underline underline-offset-4 decoration-indigo-500
             "
           >
-            Join us and help grow a greener future!
+            <Link href="/users/register">Join us and help grow a greener future!</Link>
           </h2>
         </main>
 

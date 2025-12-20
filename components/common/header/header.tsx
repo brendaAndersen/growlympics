@@ -24,8 +24,6 @@ export const Header = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-
-          {/* Logo */}
           <div className="flex items-center gap-3 bg-muted p-1 rounded-lg">
             <Link
               href="/"
@@ -40,7 +38,6 @@ export const Header = () => {
             </Link>
             <span className="text-xs">🌱</span>
           </div>
-
           {/* MENU DESKTOP */}
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <ActiveLink href="/" exact>Home</ActiveLink>
