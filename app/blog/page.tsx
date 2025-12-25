@@ -3,6 +3,7 @@ import { PostGridCard } from "@/components/post-grid-card/page";
 import { Search } from "@/components/search/page";
 import { allPosts } from "./../../.velite/generated/content";
 import { Inbox } from "lucide-react";
+import { Suspense } from "react";
 
 export type Author = {
   avatar: string;
@@ -23,6 +24,8 @@ export default function BlogPage(){
     
     return (
       <main className="mx-auto w-full px-6 py-24">
+      <Suspense fallback={<div className="h-10 w-72" />}>
+
         <header className="mb-16">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             
@@ -95,6 +98,7 @@ export default function BlogPage(){
           </PostGridCard> */}
 
         </section>
+          </Suspense>
       </main>
     )
 }
