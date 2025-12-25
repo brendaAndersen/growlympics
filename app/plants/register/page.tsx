@@ -49,14 +49,14 @@ export default function CreatePage(){
         
     return (
         <>
-            <div className="pt-16 flex bg-background">
+            <div className="flex bg-background">
               <main className="mx-auto w-full max-w-3xl py-24 px-6">
        
                 <header className="space-y-2">
                     <h2 className="text-3xl font-bold tracking-tight text-center">
                         Register a Plant 🌱
                     </h2>
-                    <p className="text-sm text-muted-foreground text-center">
+                    <p className="text-sm text-muted-foreground text-center pt-4 lg:pt-0 md:pt-0 lg:pb-0 md:pb-0 pb-4">
                         Add details about a newly planted tree here!
                     </p>
                 </header>
@@ -134,11 +134,12 @@ export default function CreatePage(){
                 </section>
 
                 <section className="space-y-4">
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                    <h3 className="text-sm font-semibold tracking-wide text-muted-foreground">
                     Plant identification
                     </h3>
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <Input name="scientificName" placeholder="Scientific name" requiredField />
                     <Input name="name" placeholder="Common name" requiredField />
                     <Input name="species" placeholder="Species" />
                     <Input name="kingdom" placeholder="Kingdom" />
@@ -146,6 +147,7 @@ export default function CreatePage(){
                     <Input name="order" placeholder="Order" />
                     <Input name="family" placeholder="Family" />
                     <Input name="genus" placeholder="Genus" />
+                    <Input name="description" placeholder="Description" />
                     </div>
                 </section>
 
