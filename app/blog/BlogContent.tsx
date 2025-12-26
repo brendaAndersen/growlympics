@@ -35,29 +35,22 @@ export function BlogContent() {
     const hasPosts = posts?.length > 0;
     
     return (
-      <main className="mx-auto w-full px-6 py-24">
+      <main className="mx-auto w-full px-6">
       <Suspense fallback={<div className="h-10 w-72" />}>
 
         <header className="mb-16">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            
-            {/* Texto */}
-            <div className="flex flex-col gap-4">
-              <span className="w-fit rounded-md bg-cyan-300 px-4 py-2 text-body-tag text-cyan-800 font-semibold">
-                {/* greatests */}
-                main crops
-              </span>
+       <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+  <div className="flex flex-col gap-4">
+    <span className="w-fit rounded-md bg-cyan-300 px-4 py-2 text-body-tag text-slate-900 font-semibold">
+      main crops
+    </span>
+  </div>
 
-              {/* <h1 className="max-w-2xl text-balance text-heading-lg text-gray-100 md:text-heading-xl">
-              </h1> */}
-            </div>
+  <div className="w-full sm:w-auto">
+    <Search />
+  </div>
+</div>
 
-            {/* Search */}
-            <div className="w-full md:w-auto">
-              <Search />
-            </div>
-
-          </div>
         </header>
 
         {/* Conteúdo */}
