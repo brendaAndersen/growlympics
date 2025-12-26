@@ -1,5 +1,8 @@
+'use client'
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 type Author = {
   name: string;
@@ -23,6 +26,8 @@ export const PostCard = ({
   date,
   author,
 }: PostCardProps) => {
+  const [imageError, setImageError] = useState(false)
+
   return (
     <Link
       href={`/blog/${slug}`}
@@ -35,13 +40,17 @@ export const PostCard = ({
             {/* <span className="text-body-xs text-gray-800 font-semibold bg-cyan-300 p-1 rounded-md">{new Date().getMonth()}/{new Date().getFullYear()}</span> */}
           <div className="absolute md:top-0 lg:top-0 top-[-6] right-0 px-3 py-1 bg-gray-600 backdrop-blur-sm rounded-bl-[10px]">
             <span className="text-body-xs text-gray-300">{date}</span>
-          </div>
+          </div> 
+          
           <Image
-            src={image}
+            src={imageError ? "/assets/default-image.jpg" : image || "/assets/default-image.jpg"}
             alt=""
             width={288}
             height={144}
-            className="w-full h-20 object-cover object-center rounded-t-[8px]"
+            onError={() => setImageError(true)}
+            className={cn(
+              "w-full h-20 object-cover object-center rounded-t-[8px]"
+            )}
           />
         </div>
 
